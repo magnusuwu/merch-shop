@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne+Mono&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #f2f5f7;
+}
+
+:root {
+  --font-main: 'Space Mono', monospace;
+  --font-sec: 'Syne Mono', monospace;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "navbar navbar navbar navbar" "main main main main" "projects projects projects projects" "technologies technologies technologies technologies";
+  max-width: 1220px;
+  margin: auto;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: #0F1624;
+}
+
+h1 {
+  font-size: 3em;
+  text-transform: capitalize;
+  line-height: 1.1;
+  background: -webkit-linear-gradient(#32de84, #4FFFB0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto 1fr;
+      grid-template-columns: auto auto 1fr;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: navbar;
+  margin: 2em 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.navbar li {
+  margin-left: 2.5em;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar img {
+  vertical-align: middle;
+}
+
+.logo {
+  font-family: var(--font-sec);
+  font-size: 1.3em;
+  place-self: center left;
+}
+
+.links {
+  place-self: center left;
+}
+
+.icons {
+  place-self: center right;
+}
+
+.main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: main;
+  margin: 10em 0;
+}
+
+.main h3 {
+  margin: 1em 0;
+  font-weight: 400;
+}
+
+.projects {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: projects;
+  margin: 4em 0;
+}
+
+.projects h1 {
+  margin-bottom: 1.5em;
+}
+
+.projects .card-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+}
+
+.projects .card-grid h3 {
+  margin-top: 1em;
+}
+
+.projects .card {
+  padding: 2em;
+  border: 1px solid #262626;
+}
+
+.projects .card li {
+  color: #32cab1;
+  margin: 0 1em;
+}
+
+.projects .card .description {
+  margin: 1em 0;
+}
+
+.projects img {
+  max-width: 100%;
+  vertical-align: middle;
+  opacity: .7;
+  background-size: cover;
+  background-position: center center;
+}
+
+.technologies {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: technologies;
+  margin: 4em 0;
+}
+
+@media (max-width: 1220px) {
+  .grid {
+    margin: 0em 2em;
+  }
+}
+
+@media (max-width: 850px) {
+  .navbar {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+  .navbar .links {
+    display: none;
+  }
+  .navbar .icons {
+    place-self: center right;
+  }
+}
+
+@media (max-width: 1000px) {
+  .projects .card-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .projects .card-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+/*# sourceMappingURL=style.css.map */

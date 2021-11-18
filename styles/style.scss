@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne+Mono&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(242, 245, 247);
+}
+
+:root {
+    --font-main: 'Space Mono', monospace;
+    --font-sec: 'Syne Mono', monospace;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas: 
+    "navbar navbar navbar navbar"
+    "main main main main"
+    "projects projects projects projects"
+    "technologies technologies technologies technologies";
+    max-width: 1220px;
+    margin: auto;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: #0F1624;
+}
+
+h1 {
+    font-size: 3em;
+    text-transform: capitalize;
+    line-height: 1.1;
+    background: -webkit-linear-gradient(#32de84, #4FFFB0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    
+    grid-area: navbar;
+    margin: 2em 0;
+
+    align-items: center;
+    
+    ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+    }
+
+    li {
+        margin-left: 2.5em;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    img {
+        vertical-align: middle;
+    }
+}
+
+.logo {
+    font-family: var(--font-sec);
+    font-size: 1.3em;
+    place-self: center left;
+}
+
+.links {
+    place-self: center left;
+}
+
+.icons {
+    place-self: center right;
+}
+
+.main {
+    grid-area: main;
+    margin: 10em 0;
+    h3 {
+        margin: 1em 0;
+        font-weight: 400;
+    }
+
+} 
+
+
+
+.projects {
+    grid-area: projects;
+    margin: 4em 0;
+
+    h1 {
+        margin-bottom: 1.5em;
+    }
+
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2em;
+
+        h3 {
+            margin-top: 1em;
+        }
+    }
+
+    .card {
+        padding: 2em;
+        li {
+            color: rgb(50, 202, 177);
+            margin: 0 1em;
+        }
+        .description {
+            margin: 1em 0;
+        }
+
+        border: 1px solid rgb(38, 38, 38);
+    }
+
+    img {
+        max-width: 100%;
+        vertical-align: middle;
+        opacity: .7;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+
+
+.technologies {
+    grid-area: technologies;
+    margin: 4em 0;
+
+
+    
+}
+
+
+@media (max-width: 1220px) {
+    .grid {
+        margin: 0em 2em;
+    }
+}
+
+
+@media (max-width: 850px) {
+    .navbar {
+        grid-template-columns: auto auto;
+        .links {
+            display: none;
+        }
+        .icons {
+            place-self: center right;
+        }
+    }
+}
+
+@media (max-width: 1000px){
+    .projects .card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 700px){
+    .projects .card-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
